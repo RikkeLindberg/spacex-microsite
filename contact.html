@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Inxspace gives you every rocket launch, news and details about rockets and launches"
+    />
+    <meta
+      name="keywords"
+      content="launch, rocket, spacex, space launch, rocket launch, spacex launch, space launch date, rocket launch date"
+    />
+    <meta name="author" content="Rikke Lindberg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://use.typekit.net/flp0ncv.css" />
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>INXSPACE | HOME</title>
+
+    <script
+      src="https://kit.fontawesome.com/97f6a5dc1c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav nav-bg">
+        <a href="index.html" class="logo"> In<span>X</span>space </a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link"> Home </a>
+          </li>
+          <li class="nav__item">
+            <a href="launches.html" class="nav__link"> Launches </a>
+          </li>
+          <li class="nav__item">
+            <a href="rockets.html" class="nav__link"> Rockets </a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link nav__link--active">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <h1 class="heading heading-primary">Contact us</h1>
+        <div class="container">
+          <form action="#" method="GET" class="form-contact">
+            <div class="form-details">
+              <label for="name">
+                Full name * <span>(at least 2characters)</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__input"
+                placeholder="Ola Nordmann"
+              />
+              <div class="form-error" id="name-error">
+                Please enter your name, at least 2 characters
+              </div>
+            </div>
+
+            <div class="form-details">
+              <label for="email">
+                Email address * <span>(must contain "@" and ".")</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__input"
+                placeholder="Example@mail.com"
+              />
+              <div class="form-error" id="email-error">
+                Please enter a valid email address, containing the "@" and "."
+                characters
+              </div>
+            </div>
+
+            <div class="form-details">
+              <label for="topic"> Select a topic </label>
+              <select class="form__input" name="topic">
+                <option value="support">Support</option>
+                <option value="career">Career</option>
+                <option value="education">Education</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-details">
+              <label for="message">
+                Message * <span>(at least 10characters)</span>
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                class="form__input"
+                placeholder="Write your message here"
+              ></textarea>
+              <div class="form-error" id="message-error">
+                Pleas write your message, at least 10 characters
+              </div>
+            </div>
+
+            <button type="submit" value="submit" id="submit" class="btn">
+              Send message
+            </button>
+            <div id="submit-message">
+              Thank you! Your contact form was submitted, we will contact you as
+              soon as possible
+              <i class="fas fa-rocket"></i>
+            </div>
+          </form>
+        </div>
+
+        <div class="container section">
+          <div>
+            <address class="contact__details">
+              <h3 class="heading heading--tertiary">Headquarters</h3>
+              <a
+                class="contact__links"
+                href="https://goo.gl/maps/fYLSny1Eh2SKHkuM7"
+                target="_blank"
+              >
+                Rocket Road Hawthorne, California
+              </a>
+            </address>
+            <address class="contact__details">
+              <h3 class="heading heading--tertiary">Sales inquires</h3>
+              <a class="contact__links" href="mailto:sales@spacex.com">
+                sales@spacex.com
+              </a>
+            </address>
+            <address class="contact__details">
+              <h3 class="heading heading--tertiary">Media inquires</h3>
+              <a class="contact__links" href="mailto:media@spacex.com">
+                media@spacex.com
+              </a>
+            </address>
+            <address class="contact__details">
+              <h3 class="heading heading--tertiary">Phone</h3>
+              <address class="contact__links" href="tel:3103636000">
+                310-363-6000
+              </address>
+            </address>
+          </div>
+        </div>
+      </section>
+
+      <section class="career-section">
+        <h2 class="heading heading--secondary">Want a career at spacex?</h2>
+        <div class="career-container">
+          <blockquote
+            cite="https://www.spacex.com/careers"
+            class="career__text"
+          >
+            From engineering to manufacturing to operations, SpaceX is looking
+            for world-class talent ready to tackle challenging projects that
+            will ultimately enable life on other planets. SpaceX is an equal
+            opportunity employer offering competitive salaries, comprehensive
+            health benefits and equity packages.
+          </blockquote>
+          <a
+            href="https://www.spacex.com/careers"
+            target="_blank"
+            class="btn btn--border"
+          >
+            Learn more at spacex.com</a
+          >
+        </div>
+
+        <div class="career-img-container">
+          <img
+            src="./images/earth-1388003_19201.jpg"
+            alt="Photo of earth seen from space"
+            class="career__image career__image--1"
+          />
+          <img
+            src="./images/night-4650993_1920.jpg"
+            alt="Photo of a rocket that takes off"
+            class="career__image career__image--2"
+          />
+          <img
+            src="./images/spacex-693229_1280.jpg"
+            alt="Photo of a SpaceX rocket in space"
+            class="career__image career__image--3"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <form action="#" method="GET" class="subscribe-form">
+        <h4 class="heading heading-quaternary">Never miss a launch</h4>
+        <p class="text text--light">Join our newsletter today</p>
+        <input
+          type="email"
+          name="emailSubscribe"
+          placeholder="Your email address"
+          class="form__input"
+        />
+        <button type="submit" name="submit" class="btn btn--cta">
+          Subscribe
+        </button>
+      </form>
+
+      <a href="index.html" class="logo logo--footer"> In<span>x</span>space </a>
+
+      <div class="footer-container">
+        <div class="footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="index.html" class="footer-nav__link"> Home </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="launches.html" class="footer-nav__link"> Launches </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="rockets.html" class="footer-nav__link"> Rockets </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="contact.html" class="footer-nav__link"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-icon">
+          <ul class="footer-icon__list">
+            <li class="footer-icon__item">
+              <a
+                href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA?app=desktop"
+                class="footer-icon__link"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="footer-icon__item">
+              <a href="https://twitter.com/spacex" class="footer-icon__link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="footer-icon__item">
+              <a
+                href="https://www.instagram.com/spacex/?hl=nb"
+                class="footer-icon__link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="footer-icon__item">
+              <a
+                href="https://www.flickr.com/photos/spacex/"
+                class="footer-icon__link"
+              >
+                <i class="fab fa-flickr"></i>
+              </a>
+            </li>
+            <li class="footer-icon__item">
+              <a href="https://www.spacex.com/" class="footer-icon__link">
+                <i class="fas fa-space-shuttle"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <small>
+        &copy; 2020 PROJECT EXAM 1 - Designed and build by Rikke Lindberg -
+        Dynamic content from SpaceX-API Github, Icons from Fontawsome, Images
+        from Pixabay and text content (contact page, career section) from
+        SpaceX.
+      </small>
+    </footer>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>

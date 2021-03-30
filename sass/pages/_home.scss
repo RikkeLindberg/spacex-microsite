@@ -1,0 +1,22 @@
+.banner {
+  background-image: url("../../images/galaxy-night-landscape.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh + 247px);
+  position: relative;
+  padding: 1rem;
+}
+
+.banner .container {
+  margin-top: 8rem;
+}
+
+@media only screen and (min-width: 520px) {
+  .banner {
+    height: 100vh;
+  }
+
+  .banner .container {
+    margin-top: 0px;
+  }
+}

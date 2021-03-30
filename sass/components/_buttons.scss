@@ -1,0 +1,28 @@
+a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: $color-dark;
+  @include button-links;
+}
+
+button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-style: none;
+  height: 45px;
+  @include button-links;
+}
+
+.btn {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.btn--cta {
+  background-color: $color-cta;
+  margin-top: 1rem;
+}

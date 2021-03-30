@@ -1,0 +1,41 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.contact__details {
+  padding-bottom: 1.5rem;
+  width: 260px;
+}
+
+.contact__links,
+.contact__links:link,
+.contact__links:visited {
+  color: var(--white-color);
+  font-size: 1.8rem;
+}
+
+.career-section {
+  margin-bottom: 10rem;
+}
+
+.career-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.career__text {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 542px;
+}
+
+.career-img-container {
+  display: none;
+}
