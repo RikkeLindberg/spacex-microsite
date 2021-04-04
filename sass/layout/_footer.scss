@@ -27,6 +27,11 @@
       color: $color-light;
       font-size: 1.6rem;
     }
+
+    &__link:hover,
+    &__link:focus {
+      color: $color-cta;
+    }
   }
 
   &-icon {
@@ -46,6 +51,11 @@
     &__link {
       color: $color-light;
       font-size: 2.5rem;
+
+      &:hover,
+      &:focus {
+        color: $color-cta;
+      }
     }
   }
 }

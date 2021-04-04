@@ -16,7 +16,7 @@ export default function displayPastLaunches(pastLaunches) {
 
         let missionPatch = "";
             if (pastLaunches[i].links.mission_patch_small === null) {
-                missionPatch = "../images/spacex-693229_640.jpg";
+                missionPatch = "../images/placeholder.png";
             } else {
                 missionPatch = pastLaunches[i].links.mission_patch_small;
             }
@@ -24,7 +24,7 @@ export default function displayPastLaunches(pastLaunches) {
         const longDate = `${pastLaunches[i].launch_date_utc}`;
         const shortDate = longDate.slice(0, 10); 
 
-        html += `<button class="btn-collapsible">${pastLaunches[i].mission_name}${shortDate}</button>
+        html += `<button class="btn-collapsible">${pastLaunches[i].mission_name}<span>${shortDate}</span></button>
                 <div class="content">
                 <img src=${missionPatch} alt="${pastLaunches[i].mission_name}" class="patch">
                     <div class="content-info">
@@ -48,8 +48,8 @@ export default function displayPastLaunches(pastLaunches) {
                                 <span>Details:</span> ${detailsValue}
                             </p>
                         </div>
-                            <a href="${pastLaunches[i].links.video_link}" target="_blank">Video &#8594</a>
-                            <a href="${pastLaunches[i].links.wikipedia}" target="_blank">More info &#8594</a>
+                            <a href="${pastLaunches[i].links.video_link}" target="_blank" class="btn-link">Video &#8594</a>
+                            <a href="${pastLaunches[i].links.wikipedia}" target="_blank" class="btn-link">More info &#8594</a>
                     </div>
                 </div> 
                 `;

@@ -71,15 +71,17 @@ small {
 
 .btn-collapsible,
 .btn-coll {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
+  background-color: #1b1e22;
+  color: #f1f1f1;
+  padding: 0 1rem;
   width: 100%;
-  border: none;
   text-align: left;
-  outline: none;
-  font-size: 15px;
+}
+
+.btn-collapsible span,
+.btn-coll span {
+  margin-left: 1.5rem;
+  color: #bfbfbf;
 }
 
 .btn-collapsible::after,
@@ -92,7 +94,7 @@ small {
 .active,
 .btn-collapsible:hover,
 .btn-coll:hover {
-  background-color: #555;
+  background-color: #5a5c5d;
 }
 
 .active::after {
@@ -103,6 +105,7 @@ small {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-right: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -126,6 +129,10 @@ small {
   margin-bottom: 1.5rem;
 }
 
+.content-info .text {
+  margin-bottom: 5px;
+}
+
 .content-info a,
 .content-info .content-links {
   margin-left: auto;
@@ -136,13 +143,25 @@ small {
   overflow-x: auto;
 }
 
+.past-launches::-webkit-scrollbar {
+  width: 15px;
+}
+
+.past-launches::-webkit-scrollbar-track {
+  background-color: #080b0d;
+}
+
+.past-launches::-webkit-scrollbar-thumb {
+  background-color: #2a2c37;
+}
+
 @media only screen and (min-width: 790px) {
   .content {
     flex-direction: row;
   }
   .content__image,
   .patch {
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
   .content-info {
     justify-content: space-between;
@@ -158,40 +177,110 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   font-family: "brandon-grotesque", sans-serif;
+  transition: all 300ms;
 }
 
 button {
   font-size: 1.6rem;
   font-weight: 600;
   border-style: none;
+  outline: none;
   height: 45px;
   cursor: pointer;
   text-transform: uppercase;
   font-family: "brandon-grotesque", sans-serif;
+  transition: all 300ms;
 }
 
 .btn {
   width: 100%;
-  max-width: 230px;
+  max-width: 250px;
   text-align: center;
   padding: 1rem 0;
 }
 
-.btn--cta {
-  background-color: #d500c7;
-  margin-top: 1rem;
+.btn-primary {
+  background-color: #12191d;
+  color: #f1f1f1;
 }
 
-.btn-hidden {
-  display: none;
+.btn-primary:hover, .btn-primary:focus {
+  transform: translate(0, -4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: #d500c7;
+}
+
+.btn--cta {
+  background-color: #d500c7;
+  margin-top: 1.2rem;
+}
+
+.btn--cta:hover, .btn--cta:focus {
+  box-shadow: 0 0 5px #d500c7, 0 0 10px #d500c7, 0 0 20px #d500c7, 0 0 40px #d500c7, 0 0 80px #d500c7;
+}
+
+.btn--cta:active {
+  box-shadow: 0 0 2.5px #d500c7, 0 0 5px #d500c7, 0 0 10px #d500c7, 0 0 20px #d500c7, 0 0 40px #d500c7;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card .patch {
+  margin: 0;
+}
+
+.card.center {
   align-items: center;
   text-align: center;
   width: 100%;
+  max-width: 500px;
+}
+
+.card__image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 6px;
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__details h4 {
+  margin-bottom: 6px;
+}
+
+.card__details a {
+  margin: 4px 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .cards {
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .patch {
@@ -332,6 +421,10 @@ button {
   font-size: 1.6rem;
 }
 
+.footer-nav__link:hover, .footer-nav__link:focus {
+  color: #d500c7;
+}
+
 .footer-icon {
   padding: 3rem 0;
 }
@@ -350,6 +443,10 @@ button {
 .footer-icon__link {
   color: #f1f1f1;
   font-size: 2.5rem;
+}
+
+.footer-icon__link:hover, .footer-icon__link:focus {
+  color: #d500c7;
 }
 
 .logo--footer {
@@ -407,6 +504,18 @@ button {
   margin-top: 3rem;
 }
 
+.form-contact .btn {
+  background-color: #d500c7;
+}
+
+.form-contact .btn:hover, .form-contact .btn:focus {
+  background-color: springgreen;
+}
+
+.form-contact .btn:active {
+  background-color: #00ff8098;
+}
+
 .form-details {
   margin-bottom: 1rem;
   font-size: 1.6rem;
@@ -419,8 +528,12 @@ button {
   width: 100%;
   height: 45px;
   font-size: 1.6rem;
-  background-color: rgba(241, 241, 241, 0.7);
+  background-color: rgba(241, 241, 241, 0.8);
   margin-top: 1rem;
+}
+
+select {
+  cursor: pointer;
 }
 
 .form__input::placeholder {
@@ -433,13 +546,6 @@ button {
   padding: 0.8rem;
 }
 
-.form-error {
-  display: none;
-  color: #f1f1f1;
-  background-color: red;
-  padding: 1rem 0.8rem;
-}
-
 .subscribe-form {
   display: flex;
   flex-direction: column;
@@ -448,11 +554,31 @@ button {
   max-width: 400px;
 }
 
+.subscribe-form .btn {
+  background-color: #d500c7;
+  margin-top: 8px;
+}
+
+.subscribe-form .btn:hover, .subscribe-form .btn:focus {
+  background-color: springgreen;
+}
+
+.subscribe-form .btn:active {
+  background-color: #00ff8098;
+}
+
+.form-error {
+  display: none;
+  color: #f1f1f1;
+  background-color: red;
+  padding: 1rem 0.8rem;
+}
+
 #submit-message {
   display: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 3rem auto 0;
-  color: var(--green-color);
+  color: springgreen;
 }
 
 *,
@@ -506,13 +632,13 @@ footer {
 
 .row {
   width: 100%;
-  align-items: flex-start;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 @media only screen and (min-width: 1000px) {
   .row {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -554,9 +680,10 @@ footer {
 
 .nav__link--active {
   border-bottom: 1px solid #f1f1f1;
+  background-color: rgba(8, 11, 13, 0.6);
 }
 
-.nav__link:hover, .nav__link:active {
+.nav__link:hover, .nav__link:focus, .nav__link:active {
   border-bottom: 1px solid #f1f1f1;
 }
 
@@ -601,7 +728,7 @@ footer {
 .banner {
   background-image: url("../../images/galaxy-night-landscape.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: right;
   height: calc(100vh + 247px);
   position: relative;
   padding: 1rem;
@@ -626,6 +753,7 @@ footer {
   flex: 1;
   align-items: center;
   width: 100%;
+  margin: auto 0;
 }
 
 .contact__details {
@@ -637,6 +765,11 @@ footer {
 .contact__links:link,
 .contact__links:visited {
   font-size: 1.6rem;
+}
+
+.contact__links:hover,
+.contact__links:focus {
+  color: #d500c7;
 }
 
 .career {
@@ -696,5 +829,9 @@ footer {
 .past-launches {
   width: 100%;
   max-width: 600px;
+}
+
+.launch-next .btn {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

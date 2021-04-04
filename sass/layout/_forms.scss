@@ -4,6 +4,19 @@
   background-color: $color-tertiary;
   padding: 2rem;
   margin-top: 3rem;
+
+  & .btn {
+    background-color: $color-cta;
+
+    &:hover,
+    &:focus {
+      background-color: springgreen;
+    }
+
+    &:active {
+      background-color: #00ff8098;
+    }
+  }
 }
 
 .form-details {
@@ -18,8 +31,12 @@
   width: 100%;
   height: 45px;
   font-size: 1.6rem;
-  background-color: rgba($color-light, 0.7);
+  background-color: rgba($color-light, 0.8);
   margin-top: 1rem;
+}
+
+select {
+  cursor: pointer;
 }
 
 .form__input::placeholder {
@@ -32,6 +49,28 @@
   padding: 0.8rem;
 }
 
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 6rem;
+  width: 100%;
+  max-width: 400px;
+
+  & .btn {
+    background-color: $color-cta;
+    margin-top: 8px;
+
+    &:hover,
+    &:focus {
+      background-color: springgreen;
+    }
+
+    &:active {
+      background-color: #00ff8098;
+    }
+  }
+}
+
 .form-error {
   display: none;
   color: $color-light;
@@ -39,17 +78,9 @@
   padding: 1rem 0.8rem;
 }
 
-.subscribe-form {
-  display: flex;
-  flex-direction: column;
-  margin: 4rem 0 6rem;
-  width: 100%;
-  max-width: 400px;
-}
-
 #submit-message {
   display: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 3rem auto 0;
-  color: var(--green-color);
+  color: springgreen;
 }

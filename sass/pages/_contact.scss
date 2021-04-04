@@ -4,6 +4,7 @@
   flex: 1;
   align-items: center;
   width: 100%;
+  margin: auto 0;
 }
 
 .contact__details {
@@ -15,6 +16,11 @@
 .contact__links:link,
 .contact__links:visited {
   font-size: 1.6rem;
+}
+
+.contact__links:hover,
+.contact__links:focus {
+  color: $color-cta;
 }
 
 .career {

@@ -11,22 +11,51 @@ button {
   font-size: 1.6rem;
   font-weight: 600;
   border-style: none;
+  outline: none;
   height: 45px;
   @include button-links;
 }
 
 .btn {
   width: 100%;
-  max-width: 230px;
+  max-width: 250px;
   text-align: center;
   padding: 1rem 0;
+
+  &-primary {
+    background-color: $color-secondary;
+    color: $color-light;
+
+    &:hover,
+    &:focus {
+      transform: translate(0, -4px);
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: translate(0, 0);
+      box-shadow: none;
+    }
+  }
+
+  &-link:hover,
+  &-link:focus {
+    color: $color-cta;
+  }
 }
 
 .btn--cta {
   background-color: $color-cta;
-  margin-top: 1rem;
-}
+  margin-top: 1.2rem;
 
-.btn-hidden {
-  display: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px $color-cta, 0 0 10px $color-cta, 0 0 20px $color-cta,
+      0 0 40px $color-cta, 0 0 80px $color-cta;
+  }
+
+  &:active {
+    box-shadow: 0 0 2.5px $color-cta, 0 0 5px $color-cta, 0 0 10px $color-cta,
+      0 0 20px $color-cta, 0 0 40px $color-cta;
+  }
 }

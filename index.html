@@ -13,19 +13,24 @@
     <meta name="author" content="Rikke Lindberg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- ADOBE FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/flp0ncv.css" />
+
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 
+    <!-- CUSTOME STYLES -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <title>INXSPACE | HOME</title>
 
+    <!-- FONTAWSOME -->
     <script
       src="https://kit.fontawesome.com/97f6a5dc1c.js"
       crossorigin="anonymous"
@@ -70,11 +75,81 @@
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <h1 class="heading heading-primary">Next launch</h1>
+        <div class="next-launch container">
+          <div class="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cards">
+            <div class="card">
+                <img src="./images/earth-img.jpg" alt="Photo of earth seen from space" class="card__image">
+                <div class="card__details">
+                    <h4 class="heading heading-quaternary">
+                        Live Streams
+                    </h4>
+                    <a href="https://www.nasa.gov/multimedia/nasatv/index.html#public" target="_blank"
+                        class="btn-link">Nasa TV &#8594
+                    </a>
+                    <a href="https://www.nasa.gov/multimedia/nasatv/iss_ustream.html" target="_blank"
+                        class="btn-link">ISS HD earth viewing &#8594
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/rocket-img-1.jpg" alt="Photo of a rocket that takes off" class="card__image">
+                <div class="card__details">
+                    <h4 class="heading heading-quaternary">
+                        Official images
+                    </h4>
+                    <a href="https://www.spacex.com/media" target="_blank" class="btn-link">
+                        Official SpaceX photos &#8594
+                    </a>
+                    <a href="https://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank"
+                        class="btn-link">
+                        NASA image of the day &#8594
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/spacex-693229_640.jpg" alt="Photo of a spaceX rocket in space"
+                    class="card__image">
+                <div class="card__details">
+                    <h4 class="heading heading-quaternary">
+                        News
+                    </h4>
+                    <a href="https://spaceflightnow.com/" target="_blank" class="btn-link">
+                        Spaceflightnow <span>&#8594</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
     </main>
 
     <footer class="footer">
       <form action="#" method="GET" class="subscribe-form">
-        <h4 class="heading heading-quaternary">Never miss a launch</h4>
+        <h4 class="heading heading-quaternary heading--light">Never miss a launch</h4>
         <p class="text text--light">Join our newsletter today</p>
         <input
           type="email"
@@ -82,7 +157,7 @@
           placeholder="Your email address"
           class="form__input"
         />
-        <button type="submit" name="submit" class="btn btn--cta">
+        <button type="submit" name="submit" class="btn">
           Subscribe
         </button>
       </form>
@@ -155,6 +230,6 @@
       </small>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

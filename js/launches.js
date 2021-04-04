@@ -20,6 +20,7 @@ async function fetchLaunches() {
         displayPastLaunches(pastLaunches);
 
     } catch (error) {
+        document.location.href = "error.html";
         console.log(error);
     }
 }

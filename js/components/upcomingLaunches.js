@@ -16,7 +16,7 @@ export default function displayUpcomingLaunches(upcomingLaunches) {
 
         let missionPatch = "";
             if (upcomingLaunches[i].links.mission_patch_small === null) {
-                missionPatch = "../images/spacex-693229_640.jpg";
+                missionPatch = "../images/placeholder.png";
             } else {
                 missionPatch = upcomingLaunches[i].links.mission_patch_small;
             }
@@ -24,28 +24,30 @@ export default function displayUpcomingLaunches(upcomingLaunches) {
         const longDate = `${upcomingLaunches[i].launch_date_utc}`;
         const shortDate = longDate.slice(0, 10); 
 
-        html += `<button class="btn-coll">${upcomingLaunches[i].mission_name}${shortDate}</button>
+        html += `<button class="btn-coll">${upcomingLaunches[i].mission_name}<span>${shortDate}</span></button>
                 <div class="content">
                     <img src=${missionPatch} alt="${upcomingLaunches[i].mission_name}" class="patch">
                     <div class="content-info">
-                        <p class="text">
-                            <span>Rocket:</span> ${upcomingLaunches[i].rocket.rocket_name}
-                        </p>
-                        <p class="text">
-                            <span>Launch site:</span> ${upcomingLaunches[i].launch_site.site_name} 
-                        </p>
-                        <p class="text">
-                            <span>Manufacturer:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].manufacturer} 
-                        </p>
-                        <p class="text">
-                            <span>Nationality:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].nationality} 
-                        </p>
-                        <p class="text">
-                            <span>Payload type:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].payload_type} 
-                        </p>
-                        <p class="text">
-                            <span>Details:</span> ${detailsValue}
-                        </p>
+                        <div>
+                            <p class="text">
+                                <span>Rocket:</span> ${upcomingLaunches[i].rocket.rocket_name}
+                            </p>
+                            <p class="text">
+                                <span>Launch site:</span> ${upcomingLaunches[i].launch_site.site_name} 
+                            </p>
+                            <p class="text">
+                                <span>Manufacturer:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].manufacturer} 
+                            </p>
+                            <p class="text">
+                                <span>Nationality:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].nationality} 
+                            </p>
+                            <p class="text">
+                                <span>Payload type:</span> ${upcomingLaunches[i].rocket.second_stage.payloads[0].payload_type} 
+                            </p>
+                            <p class="text">
+                                <span>Details:</span> ${detailsValue}
+                            </p>
+                        </div>
                     </div>
                 </div>   
                 `;

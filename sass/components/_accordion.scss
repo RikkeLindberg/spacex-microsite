@@ -4,15 +4,16 @@
 
 .btn-collapsible,
 .btn-coll {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
+  background-color: $color-tertiary;
+  color: $color-light;
+  padding: 0 1rem;
   width: 100%;
-  border: none;
   text-align: left;
-  outline: none;
-  font-size: 15px;
+
+  & span {
+    margin-left: 1.5rem;
+    color: $color-light-grey;
+  }
 
   &::after {
     content: "\f054";
@@ -24,7 +25,7 @@
 .active,
 .btn-collapsible:hover,
 .btn-coll:hover {
-  background-color: #555;
+  background-color: $color-dark-grey;
 }
 
 .active::after {
@@ -35,10 +36,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-right: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: $color-light;
 
   &__image {
     width: 100%;
@@ -56,6 +58,10 @@
       margin-bottom: 1.5rem;
     }
 
+    & .text {
+      margin-bottom: 5px;
+    }
+
     & a,
     & .content-links {
       margin-left: auto;
@@ -66,6 +72,18 @@
 .past-launches {
   height: 650px;
   overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-primary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #2a2c37;
+  }
 }
 
 @media only screen and (min-width: 790px) {
@@ -75,7 +93,7 @@
 
   .content__image,
   .patch {
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
 
   .content-info {

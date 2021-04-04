@@ -52,7 +52,7 @@ function displayRockets(rockets) {
                                 <span>Mass:</span> ${rockets[i].mass.kg} kg
                             </p>
                         </div>
-                        <a href="${rockets[i].wikipedia}" target="_blank">More info &#8594</a>
+                        <a href="${rockets[i].wikipedia}" target="_blank" class="btn-link">More info &#8594</a>
                     </div>
                 </div>    
         `;
