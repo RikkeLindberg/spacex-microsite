@@ -58,82 +58,75 @@
 
     <main>
       <section class="section">
-        <h1 class="heading heading-primary">Contact us</h1>
-        <div class="container">
-          <form action="#" method="GET" class="form-contact">
-            <div class="form-details">
-              <label for="name">
-                Full name * <span>(at least 2characters)</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                class="form__input"
-                placeholder="Ola Nordmann"
-              />
-              <div class="form-error" id="name-error">
-                Please enter your name, at least 2 characters
+        <div class="row container">
+          <div class="contact-container">
+            <h1 class="heading heading-primary">Contact us</h1>
+            <form action="#" method="GET" class="form-contact">
+              <div class="form-details">
+                <label for="name"> Full name </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form__input"
+                  placeholder="Ola Nordmann"
+                />
+                <div class="form-error" id="name-error">
+                  Please enter your full name, at least 2 characters.
+                </div>
               </div>
-            </div>
 
-            <div class="form-details">
-              <label for="email">
-                Email address * <span>(must contain "@" and ".")</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form__input"
-                placeholder="Example@mail.com"
-              />
-              <div class="form-error" id="email-error">
-                Please enter a valid email address, containing the "@" and "."
-                characters
+              <div class="form-details">
+                <label for="email"> Email address </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form__input"
+                  placeholder="Example@mail.com"
+                />
+                <div class="form-error" id="email-error">
+                  Please enter a valid email address.
+                </div>
               </div>
-            </div>
 
-            <div class="form-details">
-              <label for="topic"> Select a topic </label>
-              <select class="form__input" name="topic">
-                <option value="support">Support</option>
-                <option value="career">Career</option>
-                <option value="education">Education</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-details">
-              <label for="message">
-                Message * <span>(at least 10characters)</span>
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                class="form__input"
-                placeholder="Write your message here"
-              ></textarea>
-              <div class="form-error" id="message-error">
-                Pleas write your message, at least 10 characters
+              <div class="form-details">
+                <label for="topic"> Select a topic </label>
+                <select class="form__input" name="topic">
+                  <option value="support">Support</option>
+                  <option value="career">Career</option>
+                  <option value="education">Education</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
-            </div>
 
-            <button type="submit" value="submit" id="submit" class="btn">
-              Send message
-            </button>
-            <div id="submit-message">
-              Thank you! Your contact form was submitted, we will contact you as
-              soon as possible
-              <i class="fas fa-rocket"></i>
-            </div>
-          </form>
-        </div>
+              <div class="form-details">
+                <label for="message"> Message </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form__input form__textarea"
+                  placeholder="Write your message here"
+                ></textarea>
+                <div class="form-error" id="message-error">
+                  Pleas write your message, at least 10 characters.
+                </div>
+              </div>
 
-        <div class="container section">
-          <div>
+              <button type="submit" value="submit" id="submit" class="btn">
+                Send message
+              </button>
+              <div id="submit-message">
+                Thank you! Your contact form was submitted, we will contact you
+                as soon as possible.
+                <i class="fas fa-rocket"></i>
+              </div>
+            </form>
+          </div>
+
+          <div class="section contact-container">
             <address class="contact__details">
-              <h3 class="heading heading--tertiary">Headquarters</h3>
+              <h3 class="heading heading-tertiary">Headquarters</h3>
               <a
                 class="contact__links"
                 href="https://goo.gl/maps/fYLSny1Eh2SKHkuM7"
@@ -143,33 +136,31 @@
               </a>
             </address>
             <address class="contact__details">
-              <h3 class="heading heading--tertiary">Sales inquires</h3>
+              <h3 class="heading heading-tertiary">Sales inquires</h3>
               <a class="contact__links" href="mailto:sales@spacex.com">
                 sales@spacex.com
               </a>
             </address>
             <address class="contact__details">
-              <h3 class="heading heading--tertiary">Media inquires</h3>
+              <h3 class="heading heading-tertiary">Media inquires</h3>
               <a class="contact__links" href="mailto:media@spacex.com">
                 media@spacex.com
               </a>
             </address>
             <address class="contact__details">
-              <h3 class="heading heading--tertiary">Phone</h3>
-              <address class="contact__links" href="tel:3103636000">
-                310-363-6000
-              </address>
+              <h3 class="heading heading-tertiary">Phone</h3>
+              <a class="contact__links" href="tel:3103636000"> 310-363-6000 </a>
             </address>
           </div>
         </div>
       </section>
 
-      <section class="career-section">
-        <h2 class="heading heading--secondary">Want a career at spacex?</h2>
-        <div class="career-container">
+      <section class="section career">
+        <h2 class="heading heading-secondary">Want a career at spacex?</h2>
+        <div class="container">
           <blockquote
             cite="https://www.spacex.com/careers"
-            class="career__text"
+            class="career__blockquote text"
           >
             From engineering to manufacturing to operations, SpaceX is looking
             for world-class talent ready to tackle challenging projects that
@@ -177,11 +168,7 @@
             opportunity employer offering competitive salaries, comprehensive
             health benefits and equity packages.
           </blockquote>
-          <a
-            href="https://www.spacex.com/careers"
-            target="_blank"
-            class="btn btn--border"
-          >
+          <a href="https://www.spacex.com/careers" target="_blank" class="btn">
             Learn more at spacex.com</a
           >
         </div>
@@ -208,7 +195,9 @@
 
     <footer class="footer">
       <form action="#" method="GET" class="subscribe-form">
-        <h4 class="heading heading-quaternary">Never miss a launch</h4>
+        <h4 class="heading heading-quaternary heading--light">
+          Never miss a launch
+        </h4>
         <p class="text text--light">Join our newsletter today</p>
         <input
           type="email"
@@ -289,6 +278,6 @@
       </small>
     </footer>
 
-    <script src="js/contact.js"></script>
+    <script src="js/contactValidation.js"></script>
   </body>
 </html>

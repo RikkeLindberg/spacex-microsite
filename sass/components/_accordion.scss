@@ -1,0 +1,84 @@
+.accordion-container {
+  @include container-accordion;
+}
+
+.btn-collapsible,
+.btn-coll {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+  &::after {
+    content: "\f054";
+    font-family: "fontawesome";
+    float: right;
+  }
+}
+
+.active,
+.btn-collapsible:hover,
+.btn-coll:hover {
+  background-color: #555;
+}
+
+.active::after {
+  content: "\f078";
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 0;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 0;
+
+    & div {
+      margin-bottom: 1.5rem;
+    }
+
+    & a,
+    & .content-links {
+      margin-left: auto;
+    }
+  }
+}
+
+.past-launches {
+  height: 650px;
+  overflow-x: auto;
+}
+
+@media only screen and (min-width: 790px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .content__image,
+  .patch {
+    margin-right: 1.5rem;
+  }
+
+  .content-info {
+    justify-content: space-between;
+  }
+}

@@ -61,6 +61,94 @@ small {
   color: #f1f1f1;
 }
 
+.accordion-container {
+  justify-content: flex-start;
+  min-height: 70vh;
+  padding-top: 10rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.btn-collapsible,
+.btn-coll {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.btn-collapsible::after,
+.btn-coll::after {
+  content: "\f054";
+  font-family: "fontawesome";
+  float: right;
+}
+
+.active,
+.btn-collapsible:hover,
+.btn-coll:hover {
+  background-color: #555;
+}
+
+.active::after {
+  content: "\f078";
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.content__image {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem 0;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.content-info div {
+  margin-bottom: 1.5rem;
+}
+
+.content-info a,
+.content-info .content-links {
+  margin-left: auto;
+}
+
+.past-launches {
+  height: 650px;
+  overflow-x: auto;
+}
+
+@media only screen and (min-width: 790px) {
+  .content {
+    flex-direction: row;
+  }
+  .content__image,
+  .patch {
+    margin-right: 1.5rem;
+  }
+  .content-info {
+    justify-content: space-between;
+  }
+}
+
 a {
   display: inline-block;
   font-weight: 600;
@@ -84,7 +172,7 @@ button {
 
 .btn {
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
   text-align: center;
   padding: 1rem 0;
 }
@@ -92,6 +180,26 @@ button {
 .btn--cta {
   background-color: #d500c7;
   margin-top: 1rem;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.patch {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 250px;
+  padding: 1rem 0;
 }
 
 .lds-default {
@@ -294,8 +402,15 @@ button {
 .form-contact {
   width: 100%;
   max-width: 500px;
-  background-color: cadetblue;
-  margin-top: 5rem;
+  background-color: #1b1e22;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.form-details {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #f1f1f1;
 }
 
 .form__input {
@@ -303,25 +418,26 @@ button {
   padding: 0 0.8rem;
   width: 100%;
   height: 45px;
+  font-size: 1.6rem;
   background-color: rgba(241, 241, 241, 0.7);
   margin-top: 1rem;
 }
 
 .form__input::placeholder {
   color: #111111;
-  font-size: 1.6rem;
 }
 
-#message {
+.form__textarea {
+  height: 200px;
   font-family: "Roboto", sans-serif;
-  height: 150px;
+  padding: 0.8rem;
 }
 
 .form-error {
   display: none;
-  color: #ff3535;
-  font-size: 1.6rem;
-  padding-bottom: 1.5rem;
+  color: #f1f1f1;
+  background-color: red;
+  padding: 1rem 0.8rem;
 }
 
 .subscribe-form {
@@ -330,31 +446,6 @@ button {
   margin: 4rem 0 6rem;
   width: 100%;
   max-width: 400px;
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  margin: 10rem 1rem;
-}
-
-.contact-form-container {
-  padding-bottom: 6rem;
-}
-
-.contact-form__box {
-  max-width: 600px;
-  margin: 4rem auto;
-}
-
-.contact-form__box label {
-  font-size: 1.8rem;
-}
-
-.contact-form__details span {
-  display: inline-block;
-  font-size: 1.6rem;
-  font-style: italic;
 }
 
 #submit-message {
@@ -403,13 +494,26 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .section {
   margin: 10rem 0;
+}
+
+.row {
+  width: 100%;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .row {
+    flex-direction: row;
+  }
 }
 
 .nav {
@@ -519,8 +623,9 @@ footer {
 .contact-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: center;
-  background-color: blueviolet;
+  width: 100%;
 }
 
 .contact__details {
@@ -531,30 +636,65 @@ footer {
 .contact__links,
 .contact__links:link,
 .contact__links:visited {
-  color: var(--white-color);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
-.career-section {
-  margin-bottom: 10rem;
+.career {
+  position: relative;
 }
 
-.career-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.career__text {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-  padding: 1rem 1.5rem;
+.career__blockquote {
   margin-bottom: 1rem;
-  max-width: 542px;
 }
 
 .career-img-container {
   display: none;
+}
+
+@media only screen and (min-width: 480px) {
+  .career {
+    margin-bottom: 40rem;
+  }
+  .career-img-container {
+    display: flex;
+    position: relative;
+    margin: 7rem auto 0;
+    width: 100%;
+    max-width: 900px;
+  }
+  .career__image {
+    width: 100%;
+    max-width: 45%;
+    height: auto;
+    position: absolute;
+    transition: all 0.6s;
+    cursor: pointer;
+    filter: grayscale(100%);
+  }
+  .career__image--1 {
+    left: 3%;
+    top: 0;
+  }
+  .career__image--2 {
+    left: 25%;
+    top: 10rem;
+  }
+  .career__image--3 {
+    right: 3%;
+    top: 0;
+  }
+  .career__image--1:hover,
+  .career__image--2:hover,
+  .career__image--3:hover {
+    z-index: 999;
+    transform: scale(1.1) translateY(-1.5rem);
+    filter: grayscale(0);
+  }
+}
+
+.upcoming-launches,
+.past-launches {
+  width: 100%;
+  max-width: 600px;
 }
 /*# sourceMappingURL=style.css.map */

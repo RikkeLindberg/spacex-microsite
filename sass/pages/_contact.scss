@@ -1,8 +1,9 @@
 .contact-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: center;
-  background-color: blueviolet;
+  width: 100%;
 }
 
 .contact__details {
@@ -13,29 +14,64 @@
 .contact__links,
 .contact__links:link,
 .contact__links:visited {
-  color: var(--white-color);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
-.career-section {
-  margin-bottom: 10rem;
-}
+.career {
+  position: relative;
 
-.career-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.career__text {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  max-width: 542px;
+  &__blockquote {
+    margin-bottom: 1rem;
+  }
 }
 
 .career-img-container {
   display: none;
+}
+
+@media only screen and (min-width: 480px) {
+  .career {
+    margin-bottom: 40rem;
+  }
+
+  .career-img-container {
+    display: flex;
+    position: relative;
+    margin: 7rem auto 0;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .career__image {
+    width: 100%;
+    max-width: 45%;
+    height: auto;
+    position: absolute;
+    transition: all 0.6s;
+    cursor: pointer;
+    filter: grayscale(100%);
+  }
+
+  .career__image--1 {
+    left: 3%;
+    top: 0;
+  }
+
+  .career__image--2 {
+    left: 25%;
+    top: 10rem;
+  }
+
+  .career__image--3 {
+    right: 3%;
+    top: 0;
+  }
+
+  .career__image--1:hover,
+  .career__image--2:hover,
+  .career__image--3:hover {
+    z-index: 999;
+    transform: scale(1.1) translateY(-1.5rem);
+    filter: grayscale(0);
+  }
 }

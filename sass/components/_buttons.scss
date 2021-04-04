@@ -17,7 +17,7 @@ button {
 
 .btn {
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
   text-align: center;
   padding: 1rem 0;
 }
@@ -25,4 +25,8 @@ button {
 .btn--cta {
   background-color: $color-cta;
   margin-top: 1rem;
+}
+
+.btn-hidden {
+  display: none;
 }

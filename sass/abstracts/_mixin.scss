@@ -3,3 +3,11 @@
   text-transform: uppercase;
   font-family: $font-secondary;
 }
+
+@mixin container-accordion {
+  justify-content: flex-start;
+  min-height: 70vh;
+  padding-top: 10rem;
+  width: 100%;
+  max-width: 900px;
+}
